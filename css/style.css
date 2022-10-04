@@ -179,18 +179,22 @@ button {
   margin-top: 28px;
 }
 
-.portfolio-link,
-.studio-link {
+.portfolio-nav-link,
+.studio-nav-link {
   color: var(--accent-color);
 }
-
 .header-icon {
-  width: 16px;
-  height: 12px;
+  display: block;
+  position: absolute;
+  left: -28px;
+  top: -1px;
+  width: 18px;
+  height: 18px;
+
   fill: var(--additional-text-color);
   margin-right: 10px;
 
-  transition-property: transform;
+  transition-property: fill;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -214,12 +218,16 @@ button {
   letter-spacing: 0.02em;
   color: var(--additional-text-color);
   text-decoration: none;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  position: relative;
 
   transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contact-tel {
+  position: relative;
   font-family: var(--primary-font);
   font-style: normal;
   font-weight: 500;
@@ -809,7 +817,77 @@ button {
 .footer-icon-link:focus .footer-icon {
   fill: var(--accent-text-color);
 }
+/* ===================== FOOTER FORM ================= */
+.footer-form {
+  margin-left: 93px;
+  position: relative;
 
+  width: 570px;
+  height: 86px;
+}
+
+.footer-field-desk {
+  font-family: var(--primary-font);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.16;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--accent-text-color);
+}
+
+.footer-input-wrapper {
+  display: flex;
+  margin-top: 20px;
+}
+
+.footer-form-input {
+  height: 50px;
+  width: 358px;
+  margin-right: 12px;
+  background-color: var(--main-background-color);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  color: var(--accent-text-color);
+}
+
+.footer-form-btn {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  padding: 10px 28px;
+
+  color: var(--accent-text-color);
+  background-color: var(--accent-color);
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-form-btn:hover,
+.footer-form-btn:focus {
+  background-color: #188ce8;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.footer-form-icon {
+  width: 24px;
+  height: 24px;
+  fill: var(--accent-text-color);
+  margin-left: 10px;
+}
+
+/* ===================== //FOOTER FORM ================= */
 /* ============ //FOOTER ================= */
 
 /* ============ BACKDROP  ================= */
@@ -958,6 +1036,31 @@ button {
 }
 .modal-form-messege::placeholder {
   color: rgba(117, 117, 117, 0.5);
+}
+
+.modal-form-own-check {
+  border: 1px solid var(--primary-text-color);
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 1px;
+}
+
+.modal-form-own-check-icon {
+  display: none;
+  fill: var(--accent-text-color);
+}
+
+.modal-form-check:checked + .modal-form-own-check {
+  background-color: var(--btn-bg-color);
+  border-color: var(--btn-bg-color);
+}
+
+.modal-form-check:checked + .modal-form-own-check .modal-form-own-check-icon {
+  display: block;
+}
+
+.modal-form-check:focus + .modal-form-own-check {
+  outline: 2px solid rgba(0, 0, 201, 0.5);
 }
 
 /* ============ / MODAL FORM  ================= */
